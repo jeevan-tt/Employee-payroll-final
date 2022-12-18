@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+    <li class = "nav-item">
+        <a href="Admins" routerLinkActive="active" class="nav-link" >Employee List</a>
+    </li>
+    <li class = "nav-item">
+        <a href="createemployee" routerLinkActive="active" class="nav-link">Add New Employee</a>
+    </li>
+    <li class = "nav-item">
+        <a href="empattendance" routerLinkActive="active" class="nav-link">Attendance List</a>
+    </li>
+    <li class = "nav-item">
+        <a href="timesheetlist" routerLinkActive="active" class="nav-link">Timesheet List</a>
+    </li>
+    <li class = "nav-item">
+        <a href="schedulelist" routerLinkActive="active" class="nav-link" >Schedule List</a> 
+    </li>
+    <li class = "nav-item">
+        <a href="leavelist" routerLinkActive="active" class="nav-link">Leave List</a>
+    </li>
+    <li class = "nav-item">
+        <a href="salarylist" routerLinkActive="active" class="nav-link">Salary List</a>
+    </li>
+
+    </ul>
+
+    </nav>    <button class="btn btn-danger" type="submit" (click)="Logout()" style="float: right;">Logout</button>
+
+    
+    <h1 class="text-center" style="align-items: center;"> {{title}} </h1>
+    <div class="container">
+        <router-outlet></router-outlet>
+    
+    </div>
+
+<h2>Employee List</h2>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>empId</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Street</th>
+            <th>Location</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Mobno</th>
+            <th>EmailId</th>
+            <th>Designation</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+ <tbody>
+    <tr *ngFor = "let admin of Admins" >
+        <td> {{admin.empId}} </td>
+        <td> {{admin.fName}} </td>
+        <td> {{admin.lName}} </td>
+        <td> {{admin.dob}} </td>
+        <td> {{admin.gender}} </td>
+        <td> {{admin.street}} </td>
+        <td> {{admin.location}} </td>
+        <td> {{admin.city}} </td>
+        <td> {{admin.state}} </td>
+        <td> {{admin.pincode}} </td>
+        <td> {{admin.mobNo}} </td>
+        <td> {{admin.emailId}} </td>
+        <td> {{admin.designation}} </td>
+        <td>
+            <button (click)= "updateEmployee(admin.empId)" class="btn btn-info">Update</button>&nbsp;&nbsp;
+            <button (click)= "deleteEmployee(admin.empId)" class="btn btn-danger" >Delete</button>
+
+        </td>
+        </tr>
+ </tbody>
+</table>
+
+
+    <footer class="footer">
+    <div class = "container">
+    <span>All Rights Reserved 2022 @Freak </span>
+    </div>
+    </footer> 

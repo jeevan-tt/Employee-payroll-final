@@ -1,0 +1,63 @@
+a
+{
+color: black;
+font-size: 35px;
+background-image: none;
+background-color: none;
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    animation:alternate;
+
+}
+.abc
+{
+    text-align: center;
+    font-size: 40px;
+}
+.body
+{
+background-color:antiquewhite;
+border-radius: 30px;
+/* background-image: url(https://advantis.world/3pl/wp-content/uploads/sites/3/2016/03/logistics-consultancy-3pl-logistics-sri-lanka.jpg); */
+}
+.home img
+{
+    width: 100%;
+    height: 600px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.homecontent
+{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+}
+.homecontent h1
+{
+    color: #ffffff;
+    font-size: 50px;
+}
+.homecontent a
+{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:600px)
+{
+    .home img
+{
+    height: 700px;
+}
+    .homecontent h1
+{
+    font-size: 40px;
+}
+}

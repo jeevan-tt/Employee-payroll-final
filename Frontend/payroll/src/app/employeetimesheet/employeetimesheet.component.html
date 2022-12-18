@@ -1,0 +1,31 @@
+<h2>Timesheet List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>EmpId</th>
+      <th>Date</th>
+      <th>InTime</th>
+      <th>OutTime</th>
+      <th>RegularTime</th>
+      <th>BreakTime</th>
+      <th>OverTimeHours</th>
+      <th>TotalHours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+        <td>{{timesheet.empId}}</td>
+        <td>{{timesheet.date}}</td>
+        <td>{{timesheet.inTime}}</td>
+        <td>{{timesheet.outTime}}</td>
+        <td>{{timesheet.regularTime}}</td>
+        <td>{{timesheet.breakTime}}</td>
+        <td>{{timesheet.overtimeHours}}</td>
+        <td>{{timesheet.totalHours}}</td>
+        <td>
+        </td>
+
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-danger" (click)="Back()">Back</button>

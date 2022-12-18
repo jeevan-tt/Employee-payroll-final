@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+    <li class = "nav-item">
+        <a href="createtimesheet" routerLinkActive="active" class="nav-link" >CreateTimesheet</a>
+    </li>
+    
+    <div class="container">
+        <router-outlet></router-outlet>
+    
+    </div></ul></nav><button class="btn btn-danger" type="submit" (click)="Logout()" style="float: right;">Logout</button>
+
+<h2>Timesheet List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>EmpId</th>
+      <th>Date</th>
+      <th>InTime</th>
+      <th>OutTime</th>
+      <th>RegularTime</th>
+      <th>BreakTime</th>
+      <th>OverTimeHours</th>
+      <th>TotalHours</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let timesheet of timesheets" >
+        <td>{{timesheet.empId}}</td>
+        <td>{{timesheet.date}}</td>
+        <td>{{timesheet.inTime}}</td>
+        <td>{{timesheet.outTime}}</td>
+        <td>{{timesheet.regularTime}}</td>
+        <td>{{timesheet.breakTime}}</td>
+        <td>{{timesheet.overtimeHours}}</td>
+        <td>{{timesheet.totalHours}}</td>
+        <td>
+            <button (click) = "updateTimesheet(timesheet.empId)" class="btn btn-info" > Update</button>
+            <button (click) = "deleteTimesheet(timesheet.empId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+
+    </tr>
+  </tbody>
+</table>
+&nbsp;&nbsp;&nbsp;<a href="loginsuccess">Back</a>

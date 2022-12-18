@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+    <li class = "nav-item">
+        <a href="createattendance" routerLinkActive="active" class="nav-link" >CreateAttendance</a>
+    </li>
+    
+    <div class="container">
+    
+    </div></ul></nav> <button class="btn btn-danger" type="submit" (click)="Logout()" style="float: right;">Logout</button>
+
+
+<h2>Attendance List</h2>
+<table class ="table table-stripped">
+    <thead>
+        <tr>
+            <th>EmpId</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employ of attend">
+        <td> {{employ.empId}}</td>
+        <td> {{employ.date}}</td>
+        <td> {{employ.status}}</td>
+        <td>
+            <button (click) = "deleteEmployee(employ.empId)" class = "btn btn-danger">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+&nbsp;&nbsp;&nbsp;<a href="loginsuccess" style="font-size: 22px; font-family: 'Times New Roman', Times, serif;">Back</a>
